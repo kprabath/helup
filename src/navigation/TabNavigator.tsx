@@ -7,6 +7,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/HomeScreen';
 import IconView from '../components/IconView';
 import {IconSet} from '../utils/Types';
+import MyworkScreen from '../screens/MyWorkScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,8 +53,12 @@ const TabNavigator = () => {
           name="Home"
           component={HomeScreen}
         />
-        <Tab.Screen name="My Work" component={HomeScreen} />
-        <Tab.Screen name="Messages" component={HomeScreen} />
+        <Tab.Screen
+          options={{headerShown: false}}
+          name="My Work"
+          component={MyworkScreen}
+        />
+        <Tab.Screen name="Messages" component={MyworkScreen} />
         <Tab.Screen name="Requests" component={HomeScreen} />
         <Tab.Screen name="Settings" component={HomeScreen} />
       </Tab.Navigator>
